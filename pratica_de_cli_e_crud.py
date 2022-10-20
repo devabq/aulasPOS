@@ -35,7 +35,15 @@ def rUserFun(userId):
     rUser = requests.get(rUserUrl)
     return rUser.json()
 
-def uUserFun(user)
+def uUserFun(userToUpd):
+    uUserUrl = apiUrl + "/users/" + userToUpd
+    uUser = requests.put(uUserUrl)
+    print("work in progress")
+
+def dUserFun(userToDel):
+    dUser = apiUrl + "/users/" + userToDel
+    dUser = requests.delete(dUserUrl)
+    print("work in progress")
 
 def option3CrudUsers ():
     while True:
