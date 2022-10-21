@@ -25,6 +25,8 @@ def option2ListUserTasks ():
 #CRUD users
 ###########
 
+#CRUD logic
+
 def cUserFun(userInfo):
     cUserUrl = apiUrl + "/users/"
     cUser = requests.post(cUserUrl, json=userInfo)
@@ -35,15 +37,17 @@ def rUserFun(userId):
     rUser = requests.get(rUserUrl)
     return rUser.json()
 
-def uUserFun(userToUpd):
-    uUserUrl = apiUrl + "/users/" + userToUpd
-    uUser = requests.put(uUserUrl)
-    print("work in progress")
+def uUserFun(userId, userInfo):
+    uUserUrl = apiUrl + "/users/" + str(userId)
+    uUser = requests.put(uUserUrl, json=userInfo)
+    return uUser.json()
 
-def dUserFun(userToDel):
-    dUser = apiUrl + "/users/" + userToDel
+def dUserFun(userId):
+    dUserUrl = apiUrl + "/users/" + str(userId)
     dUser = requests.delete(dUserUrl)
-    print("work in progress")
+    return dUser.json()
+
+#Crud CLI
 
 def option3CrudUsers ():
     while True:
@@ -62,9 +66,25 @@ def option3CrudUsers ():
             else:
                 print("=========\nOcorreu um erro!")
         elif crudOption == "U":
-            updateUser()
+            userId = int(input("Digite a ID do usuário a ser atualizado:\n"))
+            if userId > 10:
+                print("=========\nUsuário não possui informações ou não existe!")
+            elif 0 < userId < 11:
+                print(rUserFun(userId))
+            else:
+                print("=========\nOcorreu um erro!")
+            userName = input("Digite o nome do usuário: \n")
+            userEmail = input("Digite o email do usuário: \n")
+            userInfo = {"name": userName, "email": userEmail}
+            print(uUserFun(userId, userInfo))
         elif crudOption == "D":
-            deleteUser()
+            userId = int(input("Digite a ID do usuário a ser apagado:\n"))
+            if userId > 10:
+                print("=========\nUsuário não possui informações ou não existe!")
+            elif 0 < userId < 11:
+                print(dUserFun(userId))
+            else:
+                print("=========\nOcorreu um erro!")
         elif crudOption == "B":
             break
         else:
