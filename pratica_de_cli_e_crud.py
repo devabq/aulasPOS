@@ -27,6 +27,8 @@ def option2ListUserTasks ():
 
 #CRUD logic
 
+#Da pra otimizar o /users/ url and stuff mas to com preguiça
+
 def cUserFun(userInfo):
     cUserUrl = apiUrl + "/users/"
     cUser = requests.post(cUserUrl, json=userInfo)
@@ -47,7 +49,7 @@ def dUserFun(userId):
     dUser = requests.delete(dUserUrl)
     return dUser.json()
 
-#Crud CLI
+#CRUD CLI
 
 def option3CrudUsers ():
     while True:
@@ -93,6 +95,72 @@ def option3CrudUsers ():
 ###########
 #CRUD tasks
 ###########
+
+#CRUD logic
+
+wip = "work in progress"
+tasksUrl = apiUrl + "/todos/"
+
+def cTaskFun(taskInfo):
+    cTask = requests.post(tasksUrl, json=taskInfo)
+    return cTask.json()
+
+def rTaskFun(taskId):
+    rTaskUrl = taskId + str(utaskId)
+    rTask = requests.get(rTaskUrl)
+    return rTask.json()
+
+def uTaskFun(taskId, taskInfo):
+    uTaskUrl = tasksUrl + str(taskId)
+    uTask = requests.put(utaskUrl, json=taskInfo)
+    return uTask.json()
+def dTaskFun():
+    dTaslUrl = tasksUrl + str(taskId)
+    dTask = requests.delete(dtaskUrl)
+    return dTask.json()
+
+#CRUD CLI
+
+def option4CrudTask():
+    while True:
+        crudOption = input("=========\nSelecione C/R/U/D ou B para voltar ao menu principal: \n")
+        if crudOption == "C":
+            taskName = input("Digite o nome do Tarefa: \n")
+            taskEmail = input("Digite o email do Tarefa: \n")
+            taskInfo = {"name": taskName, "email": taskEmail}
+            print(ctaskFun(taskInfo))
+        elif crudOption == "R":
+            taskId = int(input("Digite a ID da Tarefa a ser lido:\n"))
+            if taskId > 10:
+                print("=========\nTarefa não possui informações ou não existe!")
+            elif 0 < taskId < 11:
+                print(rtaskFun(taskId))
+            else:
+                print("=========\nOcorreu um erro!")
+        elif crudOption == "U":
+            taskId = int(input("Digite a ID da Tarefa a ser atualizado:\n"))
+            if taskId > 10:
+                print("=========\nTarefa não possui informações ou não existe!")
+            elif 0 < taskId < 11:
+                print(rtaskFun(taskId))
+            else:
+                print("=========\nOcorreu um erro!")
+            taskName = input("Digite o nome do Tarefa: \n")
+            taskEmail = input("Digite o email do Tarefa: \n")
+            taskInfo = {"name": taskName, "email": taskEmail}
+            print(utaskFun(taskId, taskInfo))
+        elif crudOption == "D":
+            taskId = int(input("Digite a ID da Tarefa a ser apagado:\n"))
+            if taskId > 10:
+                print("=========\nTarefa não possui informações ou não existe!")
+            elif 0 < taskId < 11:
+                print(dtaskFun(taskId))
+            else:
+                print("=========\nOcorreu um erro!")
+        elif crudOption == "B":
+            break
+        else:
+            print("=========\nOpção Inválida!")
 
 ####
 #CLI
