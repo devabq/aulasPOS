@@ -126,8 +126,8 @@ def option4CrudTasks():
         crudOption = input("=========\nSelecione C/R/U/D ou B para voltar ao menu principal: \n")
         if crudOption == "C":
             taskName = input("Digite o nome do Tarefa: \n")
-            taskEmail = input("Digite o email do Tarefa: \n")
-            taskInfo = {"name": taskName, "email": taskEmail}
+            taskDesc = input("Digite a descrição do Tarefa: \n")
+            taskInfo = {"name": taskName, "desc": taskDesc}
             print(cTaskFun(taskInfo))
         elif crudOption == "R":
             taskId = int(input("Digite a ID da Tarefa a ser lido:\n"))
@@ -139,9 +139,9 @@ def option4CrudTasks():
                 print("=========\nOcorreu um erro!")
         elif crudOption == "U":
             taskId = int(input("Digite a ID da Tarefa a ser atualizado:\n"))
-            taskName = input("Digite o nome do Tarefa: \n")
-            taskEmail = input("Digite o email do Tarefa: \n")
-            taskInfo = {"name": taskName, "email": taskEmail}
+            taskName = input("Digite o nome da Tarefa: \n")
+            taskDesc = input("Digite a descrição da Tarefa: \n")
+            taskInfo = {"name": taskName, "desc": taskDesc}
             print(uTaskFun(taskId, taskInfo))
         elif crudOption == "D":
             taskId = int(input("Digite a ID da Tarefa a ser apagado:\n"))
