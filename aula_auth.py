@@ -6,7 +6,7 @@ user = input("user: ")
 password = getpass()
   
 response = requests.get('https://api.github.com/user',
-            auth = HTTPBasicAuth('paulo-albuquerque', password))
+            auth = HTTPBasicAuth(user, password))
   
 print(response.text)
 print(response)
