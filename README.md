@@ -13,4 +13,5 @@
 `aula_zeep_numero.py`
 ## Prática de Auth nas APIs REST 
 > *04/11/2022*    
-`aula_auth.py`
+`aula_auth.py` 
+`aula_auth_folow.py` 
