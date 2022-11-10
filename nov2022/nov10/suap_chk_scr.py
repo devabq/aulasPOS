@@ -3,6 +3,8 @@ from getpass import getpass
 
 api_url = "https://suap.ifrn.edu.br/api/"
 
+# AUTH BEGINS
+
 user = input("user: ")
 password = getpass()
 
@@ -10,15 +12,24 @@ data = {"username":user,"password":password}
 
 response = requests.post(api_url+"v2/autenticacao/token/", json=data)
 token = response.json()["access"]
-print(response.json())
 
 headers = {
     "Authorization": f'Bearer {token}'
 }
+20
 
-print(headers)
+#AUTH ENDS
+#
+#GET SCORES BEGINS
 
-response = requests.get(api_url+"v2/minhas-informacoes/meus-dados/", json=data, headers=headers)
+#ano_letivo = str(input("Digite o ano letivo a ser consultado:\n"))
+#periodo_letivo = str(input("Selecione o período (1 ou 2):\n"))
 
-print(response.text)
-print(response)
+getscr = requests.get(api_url+f"v2/minhas-informacoes/boletim/2019/1", json=data, headers=headers)
+
+#GET SCORES ENDS
+#
+#PRINT SCORES BEGINS
+
+scrtable = getscr.json()["codigo_diario"]
+print(boletim)
