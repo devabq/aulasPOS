@@ -10,4 +10,3 @@ response = requests.get('https://api.github.com/user',
   
 print(response.text)
 print(response)
-#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
