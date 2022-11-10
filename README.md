@@ -15,4 +15,7 @@
 > *04/11/2022*    
 `aula_auth.py` 
 `aula_auth_folow.py` 
-`aula_chkfollow`
+`aula_chkfollow` 
+## Prática de Auth com SUAP
+> *10/11/20022*    
+`apis_suap.py` 
