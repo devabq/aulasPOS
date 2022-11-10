@@ -7,7 +7,7 @@
 `apis_soap.py` 
 ## Práticas de APIs SOAP usando parser 
 > *27/10/2022*    
-`aula-zeep.py` 
+`aula_zeep.py` 
 ## Práticas de APIs SOAP usando parser - parte 2 
 > *03/11/2022*    
 `aula_zeep_numero.py`
@@ -15,7 +15,8 @@
 > *04/11/2022*    
 `aula_auth.py` 
 `aula_auth_folow.py` 
-`aula_chkfollow` 
+`aula_chkfollow.py` 
 ## Prática de Auth com SUAP
 > *10/11/20022*    
 `apis_suap.py` 
+`suap_chk_scr.py` 
