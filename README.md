@@ -16,7 +16,10 @@
 `aula_auth.py` 
 `aula_auth_folow.py` 
 `aula_chkfollow.py` 
-## Prática de Auth com SUAP
-> *10/11/20022*    
+## Prática de Auth com SUAP 
+> *10/11/2022*    
 `apis_suap.py` 
 `suap_chk_scr.py` 
+## Prática de OAuth com servidor web 
+> *11/11/2022*
+`praticaoauth`

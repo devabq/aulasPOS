@@ -31,5 +31,6 @@ getscr = requests.get(api_url+f"v2/minhas-informacoes/boletim/2019/1", json=data
 #
 #PRINT SCORES BEGINS
 
-scrtable = getscr.json()["codigo_diario"]
-print(boletim)
+scrtable = getscore.json()["codigo_diaro"]
+
+print(scrtable)
