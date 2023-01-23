@@ -1,4 +1,5 @@
 # Repositório de programas das aulas de Programação Orientada a Serviços 
+<p> Repositório criado para armazenar atividades de programação desenvolvidas na disciplina "Programação Orientada a Serviços" do curso de "Informática para Internet" pelo IFRN - Campus São Paulo do Potengi </p>
 ## Prática de APIs
 > *Dia 14/10/2022*    
 `pratica_de_cli_e_crud.py` 
