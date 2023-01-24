@@ -1,7 +1,7 @@
 # Repositório de programas das aulas de Programação Orientada a Serviços 
 <p> Repositório criado para armazenar atividades de programação desenvolvidas na disciplina "Programação Orientada a Serviços" do curso de "Informática para Internet" pelo IFRN - Campus São Paulo do Potengi. </p>
 
-<p> Abaixo é descrito os títulos das atividades desenvolvidas assim como a data em que foram criadas (mas não necessariamente tiveram seu desenvolvimento finalizado). </p>
+<p> Abaixo é descrito os títulos de algumas das atividades desenvolvidas assim como a data em que foram criadas (mas não necessariamente tiveram seu desenvolvimento finalizado). </p>
 
 ## Prática de APIs
 > *Dia 14/10/2022*    
