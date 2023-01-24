@@ -26,4 +26,4 @@
 `suap_chk_scr.py` 
 ## Prática de OAuth com servidor web 
 > *11/11/2022*
-`praticaoauth`
+`praticaoauth.py`
