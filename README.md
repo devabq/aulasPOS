@@ -4,7 +4,7 @@
 <p> Abaixo é descrito os títulos de algumas das atividades desenvolvidas assim como a data em que foram criadas (mas não necessariamente tiveram seu desenvolvimento finalizado). </p>
 
 ## Prática de APIs
-> *Dia 14/10/2022*    
+> *14/10/2022*    
 `pratica_de_cli_e_crud.py` 
 ## Prática de APIs SOAP 
 > *20/10/2022*    
@@ -25,5 +25,5 @@
 `apis_suap.py` 
 `suap_chk_scr.py` 
 ## Prática de OAuth com servidor web 
-> *11/11/2022*
+> *11/11/2022* 
 `praticaoauth.py`
